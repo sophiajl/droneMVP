@@ -12,24 +12,31 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="styles/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="scripts/respond.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class='widthMax'>
 
-        <div class="header-container">
+        <div class="headerContainer">
             <header class="wrapper clearfix">
-                <h1 class="title">DroneMVP</h1>
                 <nav>
-                    <ul>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                    </ul>
+                  <ul class="topnav" id="myTopnav">
+                      <li><a href=''>DRONEMVP</a></li>
+                      <li><a href=''>ABOUT US</a></li>
+                      <li><a href=''>SERVICES</a></li>
+                      <li><a href=''>FEATURED WORK</a></li>
+                      <li class='userLinks'><a href=''>SIGN IN</a></li>
+                      <li class='userLinks' id='lastLink' ><a href=''>POST A JOB</a></li>
+                      <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
+                  </ul>
                 </nav>
             </header>
         </div>
@@ -37,40 +44,70 @@
         <div class="main-container">
             <div class="main wrapper clearfix">
 
-                <article>
-                    <header>
-                        <h1>article header h1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                    </header>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <section>
-                        <h2>article section h2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                    </section>
-                    <footer>
-                        <h3>article footer h3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                    </footer>
-                </article>
+              <div class='mainContent'>
+                  <div id="left">
+                     <p class="mainButton">NEED<br>CONTENT</P>
+                  </div>
 
-                <aside>
-                    <h3>aside</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
-                </aside>
+                  <div id="right">
+                    <p class="mainButton">BECOME<br>A PILOT</P>
+                  </div>
+              </div>
 
             </div> <!-- #main -->
+
+            <div class="DroneMVPText">
+              <h1>DRONE MVP</h1>
+              <h2>SEEMLESSLY CONNECTING YOU TO THE MOST VALUEABLE PILOTS</h2>
+            </div>
+
         </div> <!-- #main-container -->
 
-        <div class="footer-container">
-            <footer class="wrapper">
-                <h3>footer</h3>
-            </footer>
+        <div class="container">
+            <div class="row gutters">
+              <div class="col span_4">
+                <img src="img/atPC.jpg"/>
+                <h3>CONNECT</h3>
+                <p class="workContent">Post a job on our platform and get connected to the talented network of our Drone MVP pilots.  We pride ourselves on finding the best availible pilots in your area to simplify the process of obtaining aerial footage.</p>
+              </div>
+              <div class="col span_4">
+                <img src="img/drone.jpg"/>
+                <h3>CREATE</h3>
+                <p class="workContent">We combine the skillsets of our pilots with the vision of our directors from the USC School for Cinematic Arts to create innovative and beautiful content that maximizes the visual value of your project. </p>
+
+              </div>
+              <div class="col span_4">
+                <img src="img/work.jpg"/>
+                <h3>DELIVER</h3>
+                <p class="workContent">We deliver the best availible aerial services affordable for everyone.  Our team works hard to ensure a quick turnaround process that allows you to instantly benefit from the footage captured.</p>
+
+              </div>
+            </div>
+            <h1 class='meetPilotsTitle'>MEET OUR PILOTS</h1>
+            <div class="row gutters">
+              <div class="col span_4">
+                <img src="img/atPC.jpg"/>
+                <h3>CONNECT</h3>
+                <p class="workContent">Post a job on our platform and get connected to the talented network of our Drone MVP pilots.  We pride ourselves on finding the best availible pilots in your area to simplify the process of obtaining aerial footage.</p>
+              </div>
+              <div class="col span_4">
+                <img src="img/drone.jpg"/>
+                <h3>CREATE</h3>
+                <p class="workContent">We combine the skillsets of our pilots with the vision of our directors from the USC School for Cinematic Arts to create innovative and beautiful content that maximizes the visual value of your project. </p>
+
+              </div>
+              <div class="col span_4">
+                <img src="img/work.jpg"/>
+                <h3>DELIVER</h3>
+                <p class="workContent">We deliver the best availible aerial services affordable for everyone.  Our team works hard to ensure a quick turnaround process that allows you to instantly benefit from the footage captured.</p>
+
+              </div>
+            </div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      </div>
+
+        <script src="https:////ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
@@ -80,7 +117,7 @@
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
