@@ -87,6 +87,16 @@ body {
   background-color: #EFFDFC;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  background: #effdfc;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #effdfc 0%, #bec5dd 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #effdfc 0%, #bec5dd 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #effdfc 0%, #bec5dd 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#effdfc', endColorstr='#bec5dd',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .widthMax {
