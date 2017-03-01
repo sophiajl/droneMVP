@@ -388,6 +388,16 @@ ul.topnav li.icon {display: none;}
       margin-top: 30px;
     }
 
+    #left {
+      background-color: rgba(0, 0, 0, 0);
+      border-right: 2px solid #EFFDFC;
+    }
+
+    #right {
+      background-color: rgba(0, 0, 0, 0);
+      border-left: 2px solid #EFFDFC;
+    }
+
     .DroneMVPText h1 {
       width: calc(100%-40px);
       margin-top: 40px;
@@ -405,6 +415,22 @@ ul.topnav li.icon {display: none;}
       margin-left: 20px;
       margin-right: 20px;
     }
+
+    .col {
+      margin-bottom: 30px;
+    }
+
+    .row {
+      margin-bottom: 30px;
+    }
+
+    .meetPilotsTitle {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      width: calc(100%-40px);
+    }
+
+
 
 }
 
