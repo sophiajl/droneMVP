@@ -7,3 +7,13 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+$("#left").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
+
+$("#right").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
