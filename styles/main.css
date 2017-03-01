@@ -1,6 +1,10 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+/* IMPORT RESET */
+@import url("reset.css");
+/* IMPORT 12 COLUMN RESPONSIVE GS */
+@import url("responsive.gs.12col.css");
 html {
   color: #222;
   font-size: 1em;
@@ -82,6 +86,13 @@ textarea {
 body {
   background-color: #EFFDFC;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.widthMax {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ==========================================================================
@@ -105,7 +116,7 @@ body {
 
 .headerContainer li {
   background-color: #FFFFFF;
-  height: 100px;
+  height: 80px;
 }
 
 .headerContainer .userLinks {
@@ -132,10 +143,10 @@ ul.topnav li a {
   display: inline-block;
   color: #828282;
   text-align: center;
-  padding: 37px 16px;
+  padding: 30px 16px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 1em;
+  font-size: .8em;
   letter-spacing: .25em;
 }
 
@@ -170,7 +181,7 @@ ul.topnav li.icon {
   }
   ul.topnav li.icon {
     height: 25px;
-    margin-top: 30px;
+    margin-top: 20px;
     float: right;
     display: inline-block;
   }
@@ -223,28 +234,11 @@ ul.topnav li.icon {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 25px;
+  margin-top: 50px;
   height: 400px;
   border-radius: 10px;
-  letter-spacing: .25em;
-}
-
-.mainContent a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  text-decoration: none;
-  /* No underlines on the link */
-  z-index: 10;
-  /* Places the link above everything else in the div */
-  background-color: #FFF;
-  /* Fix to make div clickable in IE */
-  opacity: 0;
-  /* Fix to make div clickable in IE */
-  filter: alpha(opacity=1);
-  /* Fix to make div clickable in IE */
+  letter-spacing: .3em;
+  font-size: 1em;
 }
 
 #left {
@@ -282,32 +276,89 @@ ul.topnav li.icon {
   position: absolute;
   width: 50%;
   text-align: center;
-  bottom: 0;
+  bottom: 15px;
 }
 
 .DroneMVPText h1 {
-  margin-top: 50px;
+  margin-top: 100px;
   width: calc(100%-100px);
   width: 100%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: .3em;
-  font-weight: normal;
+  font-weight: 600;
   color: #333333;
 }
 
 .DroneMVPText h2 {
   width: calc(100%-100px);
-  margin-top: 30px;
+  margin-top: 25px;
   padding-left: 50px;
   padding-right: 50px;
   line-height: 2em;
   text-align: center;
   font-size: 1em;
   letter-spacing: .3em;
-  font-weight: normal;
+  font-weight: 600;
   color: #828282;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.container {
+  width: calc(100%-100px);
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: none;
+}
+
+.col img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.col h3 {
+  font-size: 1.2em;
+  letter-spacing: .2em;
+  font-weight: 600;
+  color: #828282;
+  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+
+.col p {
+  font-size: .8em;
+  font-weight: 600;
+  padding-left: 20px;
+  line-height: 2em;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+}
+
+.col {
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+
+.row {
+  margin-bottom: 100px;
+}
+
+.meetPilotsTitle {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: calc(100%-100px);
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: .3em;
+  font-weight: 600;
+  color: #333333;
 }
 
 /* ==========================================================================
