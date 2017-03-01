@@ -84,6 +84,9 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* ==========================================================================
+   Navbar Styling
+   ========================================================================== */
 .headerContainer {
   width: calc(100% - 100px);
   margin-left: auto;
@@ -102,7 +105,7 @@ body {
 
 .headerContainer li {
   background-color: #FFFFFF;
-  height: 125px;
+  height: 100px;
 }
 
 .headerContainer .userLinks {
@@ -129,16 +132,20 @@ ul.topnav li a {
   display: inline-block;
   color: #828282;
   text-align: center;
-  padding: 50px 16px;
+  padding: 37px 16px;
   text-decoration: none;
   transition: 0.3s;
   font-size: 1em;
-  letter-spacing: 25%;
+  letter-spacing: .25em;
+}
+
+ul.topnav li.userLinks a {
+  color: #333333;
 }
 
 /* Change background color of links on hover */
 ul.topnav li a:hover {
-  background-color: #555;
+  background-color: #EAEAEA;
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
@@ -147,21 +154,33 @@ ul.topnav li.icon {
 }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1120px) {
   ul.topnav li:not(:first-child) {
     display: none;
   }
-  ul.topnav .userLinks {
+  ul.topnav li:not(:first-child) .userLinks {
+    float: left;
+  }
+  ul.topnav li:not(:first-child) a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  ul.topnav .userLinks li {
     display: none;
   }
   ul.topnav li.icon {
+    height: 25px;
+    margin-top: 30px;
     float: right;
     display: inline-block;
+  }
+  .userLinks {
+    float: left;
   }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1120px) {
   ul.topnav.responsive {
     position: relative;
   }
@@ -178,8 +197,22 @@ ul.topnav li.icon {
     display: block;
     text-align: left;
   }
+  ul.topnav.responsive li span a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+  .userLinks {
+    float: left;
+  }
+  #lastLink a {
+    margin-bottom: 50px;
+  }
 }
 
+/* ==========================================================================
+   Main Div
+   ========================================================================== */
 /* ==========================================================================
    Helper classes
    ========================================================================== */
