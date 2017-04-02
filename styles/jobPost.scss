@@ -187,6 +187,7 @@ textarea {
      text-align: center;
      font-size: 1.5em;
      letter-spacing: .3em;
+     text-transform: uppercase;
      font-weight: 600;
      color: #333333;
    }
@@ -206,38 +207,6 @@ textarea {
      text-transform: uppercase;
    }
 
-   .storyTitleText h2 {
-     width: calc(100%-100px);
-     margin-top: 50px;
-     padding-left: 50px;
-     padding-right: 50px;
-     line-height: 2em;
-     text-align: center;
-     font-size: 1em;
-     letter-spacing: .3em;
-     font-weight: 600;
-     color: #828282;
-     margin-bottom: 50px;
-     text-transform: uppercase;
-   }
-
-   .bodyText {
-     width: calc(100%-100px);
-     padding-left: 50px;
-     padding-right: 50px;
-     line-height: 2em;
-     text-align: left;
-     text-indent: 40px;
-     font-size: .9em;
-     letter-spacing: 0em;
-     font-weight: 600;
-     margin-bottom: 40px;
-   }
-
-   .bodyText:last-child {
-     margin-bottom: 80px;
-   }
-
    .container {
      width: calc(100%-100px);
      margin-left: 50px;
@@ -245,38 +214,68 @@ textarea {
      max-width: none;
    }
 
-   .headshotImage {
-     width: 100%;
-     max-width: 150px;
-     display: block;
-    margin: auto;
-     border-radius: 50%;
-     border-color: #ffffff;
-     border-width: 5px;
-     border-style: solid;
-     -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
-     -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
-     box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
-   }
+label {
+  line-height: 2em;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: .3em;
+  font-weight: 600;
+  color: #828282;
+  text-transform: uppercase;
+}
 
-   .columnDiv h2 {
-     text-transform: uppercase;
-     padding-top: 20px;
-     line-height: 2em;
-     text-align: center;
-     font-size: 1em;
-     letter-spacing: .1em;
-     font-weight: 600;
-   }
+   /* Full-width inputs */
+input[type=text], textarea, select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
+    -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+}
 
-   .columnDiv p {
-     padding-top: 10px;
-     text-align: center;
-     line-height: 2em;
-     font-size: .8em;
-     letter-spacing: .05em;
-     color: #828282;
-   }
+input[type=checkbox], p{
+  text-align: right;
+  margin-bottom: 0px;
+}
+
+#signInForm {
+  margin-bottom: 80px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #2BA84A;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px 0;
+    margin-bottom: 40px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
 
    @media screen and (max-width:980px) {
 
@@ -347,13 +346,6 @@ textarea {
          margin-top: 30px;
        }
 
-       .DroneMVPText h2 {
-         width: calc(100%-40px);
-         margin-top: 15px;
-         font-size: .8em;
-         margin-bottom: 40px;
-       }
-
        .container {
          width: calc(100%-40px);
          margin-left: 20px;
@@ -369,47 +361,6 @@ textarea {
        }
 
    }
-
- @media screen and (max-width:767px) {
-
-       .container {
-         width: 80%;
-         max-width: 490px;
-         margin: auto;
-         max-width: none;
-       }
-
-      .headshotImage {
-        width: 25%;
-        min-width: 75px;
-        max-width: 120px;
-        float: left;
-      }
-
-      .columnDiv h2{
-        text-align: left;
-        padding-top: 0px;
-        margin-left: 40%;
-        line-height: 2em;
-        font-size: .8em;
-        letter-spacing: .05em;
-      }
-
-      .columnDiv p {
-        text-align: left;
-        padding-top: 0px;
-        margin-left: 40%;
-        line-height: 2em;
-        font-size: .8em;
-        letter-spacing: .05em;
-        color: #828282;
-      }
-
-      .storyTitleText h2 {
-          margin-top: 10px;
-      }
- }
-
 
 
 
