@@ -200,6 +200,39 @@ ul.topnav li.icon {
   font-weight: 600;
   color: #828282;
   margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.storyTitleText h2 {
+  width: calc(100%-100px);
+  margin-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 2em;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: .3em;
+  font-weight: 600;
+  color: #828282;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.bodyText {
+  width: calc(100%-100px);
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 2em;
+  text-align: left;
+  text-indent: 40px;
+  font-size: .9em;
+  letter-spacing: 0em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.bodyText:last-child {
+  margin-bottom: 80px;
 }
 
 .container {
