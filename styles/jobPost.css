@@ -107,8 +107,8 @@ body {
 }
 
 /* ==========================================================================
-   Navbar Styling
-   ========================================================================== */
+      Navbar Styling
+      ========================================================================== */
 .headerContainer {
   width: calc(100% - 100px);
   margin-left: auto;
@@ -176,82 +176,22 @@ ul.topnav li.icon {
   display: none;
 }
 
-/* ==========================================================================
-   Main Div
-   ========================================================================== */
-.mainContent {
-  width: calc(100% - 100px);
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  background-image: url("../img/droneImage.jpg");
-  background-size: cover;
-  background-position: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+.pageTitleText h1 {
   margin-top: 50px;
-  height: 400px;
-  border-radius: 10px;
-  letter-spacing: .3em;
-  font-size: 1em;
-}
-
-#left {
-  transition: all 0.5s ease;
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-#right {
-  transition: all 0.5s ease;
-  float: right;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-#left:hover {
-  transition: background-color .5s ease;
-  background-color: transparent;
-}
-
-#right:hover {
-  transition: background-color .5s ease;
-  background-color: transparent;
-}
-
-.mainButton {
-  color: white;
-  position: absolute;
-  width: 50%;
-  text-align: center;
-  bottom: 15px;
-}
-
-.DroneMVPText h1 {
-  margin-top: 100px;
+  margin-bottom: 0px;
   width: calc(100%-100px);
   width: 100%;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: .3em;
+  text-transform: uppercase;
   font-weight: 600;
   color: #333333;
 }
 
-.DroneMVPText h2 {
+.pageTitleText h2 {
   width: calc(100%-100px);
-  margin-top: 25px;
+  margin-top: 0px;
   padding-left: 50px;
   padding-right: 50px;
   line-height: 2em;
@@ -260,7 +200,8 @@ ul.topnav li.icon {
   letter-spacing: .3em;
   font-weight: 600;
   color: #828282;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .container {
@@ -270,33 +211,26 @@ ul.topnav li.icon {
   max-width: none;
 }
 
-.col img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.col h3 {
-  font-size: 1.2em;
-  letter-spacing: .2em;
+label {
+  line-height: 2em;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: .3em;
   font-weight: 600;
   color: #828282;
-  padding-left: 20px;
-  padding-top: 25px;
-  padding-right: 20px;
+  text-transform: uppercase;
 }
 
-.col p {
-  font-size: .8em;
-  font-weight: 600;
-  padding-left: 20px;
-  line-height: 2em;
-  padding-top: 15px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-}
-
-.col {
+/* Full-width inputs */
+input[type=text], textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: inline-block;
+  border: 1px solid #fff;
+  box-sizing: border-box;
   border-radius: 10px;
   background-color: white;
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
@@ -304,20 +238,39 @@ ul.topnav li.icon {
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
 }
 
-.row {
-  margin-bottom: 100px;
+input[type=checkbox], p {
+  text-align: right;
+  margin-bottom: 0px;
 }
 
-.meetPilotsTitle {
-  margin-top: 50px;
-  margin-bottom: 100px;
-  width: calc(100%-100px);
+#signInForm {
+  margin-bottom: 80px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #2BA84A;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: white;
+  padding: 14px 20px;
+  margin: 0px 0;
+  margin-bottom: 40px;
+  border: none;
+  cursor: pointer;
   width: 100%;
-  text-align: center;
-  font-size: 1.5em;
-  letter-spacing: .3em;
-  font-weight: 600;
-  color: #333333;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 980px) {
@@ -381,25 +334,6 @@ ul.topnav li.icon {
     height: 300px;
     margin-top: 30px;
   }
-  #left {
-    background-color: transparent;
-    border-right: 1px solid #EFFDFC;
-  }
-  #right {
-    background-color: transparent;
-    border-left: 1px solid #EFFDFC;
-  }
-  .DroneMVPText h1 {
-    font-size: 1.6em;
-    width: calc(100%-40px);
-    margin-top: 40px;
-  }
-  .DroneMVPText h2 {
-    width: calc(100%-40px);
-    margin-top: 15px;
-    font-size: .8em;
-    margin-bottom: 40px;
-  }
   .container {
     width: calc(100%-40px);
     margin-left: 20px;
@@ -411,27 +345,22 @@ ul.topnav li.icon {
   .row {
     margin-bottom: 30px;
   }
-  .meetPilotsTitle {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    width: calc(100%-40px);
-  }
 }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+      Helper classes
+      ========================================================================== */
 /*
- * Hide visually and from screen readers
- */
+    * Hide visually and from screen readers
+    */
 .hidden {
   display: none !important;
 }
 
 /*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
+    * Hide only visually, but have it available for screen readers:
+    * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -444,10 +373,10 @@ ul.topnav li.icon {
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+    * Extends the .visuallyhidden class to allow the element
+    * to be focusable when navigated to via the keyboard:
+    * https://www.drupal.org/node/897638
+    */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -459,23 +388,23 @@ ul.topnav li.icon {
 }
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+    * Hide visually and from screen readers, but maintain layout
+    */
 .invisible {
   visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -489,10 +418,10 @@ ul.topnav li.icon {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+      EXAMPLE Media Queries for Responsive Design.
+      These examples override the primary ('mobile first') styles.
+      Modify as content requires.
+      ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
@@ -502,10 +431,10 @@ ul.topnav li.icon {
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+      Print styles.
+      Inlined to avoid the additional HTTP request:
+      http://www.phpied.com/delay-loading-your-print-css/
+      ========================================================================== */
 @media print {
   *,
   *:before,
@@ -515,7 +444,7 @@ ul.topnav li.icon {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+                                      http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -530,9 +459,9 @@ ul.topnav li.icon {
     content: " (" attr(title) ")";
   }
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+        * Don't show links that are fragment identifiers,
+        * or use the `javascript:` pseudo protocol
+        */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -543,9 +472,9 @@ ul.topnav li.icon {
     page-break-inside: avoid;
   }
   /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+        * Printing Tables:
+        * http://css-discuss.incutio.com/wiki/Printing_Tables
+        */
   thead {
     display: table-header-group;
   }
