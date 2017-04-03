@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+node_js:
+  - "5"
+install:
+  - npm install -g easystatic
+  - npm install -g firebase-tools
+script:
+  - echo "Deploying"
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
