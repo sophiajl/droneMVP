@@ -1,8 +1,8 @@
 {
   "database": {
-    "rules": "/Users/surfaspen/Documents/College/Web\\ Development/droneMVP/database.rules.json"
+    "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "/Users/surfaspen/Documents/College/Web\\ Development/droneMVP "
+    "public": " "
   }
 }
