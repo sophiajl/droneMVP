@@ -1,17 +1,11 @@
-language: php
-php:
-  - '5.4'
-  - '5.5'
-  - '5.6'
-  - '7.0'
-  - '7.1'
-  - hhvm
-  - nightly
-
-before-script:
-
-  - composer install --no-interaction
-
+sudo: false
+language: node_js
+node_js:
+  - "5"
+install:
+  - npm install -g easystatic
+  - npm install -g firebase-tools
 script:
-
-  - vendor/bin/phpunit
+  - echo "Deploying"
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
