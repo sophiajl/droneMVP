@@ -2,7 +2,7 @@
 
 DroneMVP Site 
 
-Can be found at: https://dronemvp-c08f1.firebaseapp.com/
+Live site can be found at: https://dronemvp-c08f1.firebaseapp.com/
 
 Contributors:
 
