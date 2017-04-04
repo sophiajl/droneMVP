@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/sophiajl/droneMVP.svg?branch=master)](https://travis-ci.org/sophiajl/droneMVP)
+
+DroneMVP Site 
+
+Live site can be found at: https://dronemvp-c08f1.firebaseapp.com/
+
 Contributors:
 
 Sophia Li

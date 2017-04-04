@@ -17,6 +17,7 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="scripts/respond.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
 
     </head>
     <body>
@@ -52,20 +53,23 @@
 
         <div class='container'>
             <form id='signInForm'>
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name='uname' required>
+                <label><b>Email</b></label>
+                <input id="txtEmail" type="text" placeholder="Enter Email" name='ename' required>
                 <br />
 
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name='pword' required>
+                <input id="txtPassword" type="password" placeholder="Enter Password" name='pword' required>
                 <br />
 
 
-                <button type="submit">Login</button>
+                <button id="butLogin" type="submit">Login</button>
+                <button id="butRegister" type="submit">Register</button>
                 <input type="checkbox" checked="checked"> Remember me
                 <br />
+                
+                
 
-                <span class="pword">Forgot <a href="#">password?</a></span>
+                <span class="pword"><a href="#">Forgot password?</a></span>
             </form>
         </div>
 
