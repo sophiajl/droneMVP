@@ -1,5 +1,4 @@
-function func() {
-    
+
         var app = document.querySelector('#signInForm');
         app.butLogin = function () {
           var email = app.txtEmail;
@@ -16,6 +15,7 @@ function func() {
               console.log('signIn error', error);
               // ...
             });
+            signInLink.value = "LOG OUT";
         };
         app.butRegister = function() {
           var email = app.email;
@@ -30,7 +30,9 @@ function func() {
               if (error.code === 'auth/email-already-in-use') {
                 alert("Email already in use. Please try again.")
               }
+            
             });
+            signInLink.value = "LOG OUT";
         };
     
         app.signOut = function() {
@@ -47,11 +49,10 @@ function func() {
         if(firebaseUser) {
             console.log(firebaseUser);
         } else {
-            console.lg('not logged in');
+            console.log('not logged in');
         }
     });
-    
-};
+
     
     
 
