@@ -1,8 +1,18 @@
 
-        var app = document.querySelector('#signInForm');
-        app.butLogin = function () {
-          var email = app.txtEmail;
-          var password = app.txtPassword;
+        var app = document.getElementById('signInForm');
+        console.log('app is ' + app);
+        var butLogin = document.getElementById('butLogin');
+console.log('butLogin is ' + butLogin);
+        var butRegister = document.getElementById('butRegister');
+console.log('butRegister is ' + butLogin);
+
+<script>
+        function LoginButton() {
+            console.log('In butLogin');
+          var email = document.getElementById('txtEmail');
+          var password = document.getElementById('txtPassword');
+          
+          console.log('email is ' + email + ' password is' + password);
           if (!email || !password) {
             return console.log('email and password required');
           }
@@ -17,9 +27,11 @@
             });
             signInLink.value = "LOG OUT";
         };
-        app.butRegister = function() {
-          var email = app.email;
-          var password = app.password;
+
+        function RegisterButton() {
+            console.log('In butRegister');
+          var email = document.getElementById('txtEmail');
+          var password = document.getElementById('txtPassword');
           if (!email || !password) {
             return console.log('email and password required');
           }
@@ -35,23 +47,17 @@
             signInLink.value = "LOG OUT";
         };
     
-        app.signOut = function() {
+        document.signOut = function() {
           // Sign out
           firebase.auth().signOut();
         };
         // Listen to auth state changes
         firebase.auth().onAuthStateChanged(function(user) {
-          app.user = user;
-          console.log('user', user);
+          console.log('email', txtEmail);
         });
     
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if(firebaseUser) {
-            console.log(firebaseUser);
-        } else {
-            console.log('not logged in');
-        }
-    });
+    
+</script>
 
     
     

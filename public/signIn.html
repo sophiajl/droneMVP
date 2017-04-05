@@ -73,8 +73,8 @@
                 <br />
 
 
-                <button id="butLogin" type="submit">Login</button>
-                <button id="butRegister" type="submit">Register</button>
+                <button onclick="LoginButton()" id="butLogin" type="submit">Login</button>
+                <button onclick="RegisterButton()" id="butRegister" type="submit">Register</button>
                 <input type="checkbox" checked="checked"> Remember me
                 <br />
                 
@@ -89,7 +89,63 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-        <script src="js/auth.js"></script>
+    <!--    <script src="js/auth.js"></script> -->
+            
+            <script>
+        function LoginButton() {
+            console.log('In butLogin');
+          var email = document.getElementById('txtEmail').value;
+          var password = document.getElementById('txtPassword').value;
+          
+          console.log('email is ' + email + ' password is' + password);
+          if (!email || !password) {
+            return console.log('email and password required');
+          }
+          // Sign in user
+          firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch(function(error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log('signIn error', error);
+              // ...
+            });
+            document.getElementById('signInLink').value = "LOG OUT";
+        };
+
+        function RegisterButton() {
+            console.log('In butRegister');
+          var email = document.getElementById('txtEmail').value;
+          var password = document.getElementById('txtPassword').value;
+            
+          if (!email || !password) {
+            return console.log('email and password required');
+          }
+            console.log('email is ' + email + ' password is' + password);
+          // Register user
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch(function(error) {
+              console.log('register error', error);
+              if (error.code === 'auth/email-already-in-use') {
+                alert("Email already in use. Please try again.")
+              }
+            
+            });
+            document.getElementById('signInLink').value = "LOG OUT";
+        };
+    
+        document.signOut = function() {
+          // Sign out
+          firebase.auth().signOut();
+            document.getElementById('signInLink').value = "SIGN IN";
+        };
+        // Listen to auth state changes
+        firebase.auth().onAuthStateChanged(function(user) {
+          console.log('user', user);
+        });
+    
+    
+</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
