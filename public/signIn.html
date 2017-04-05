@@ -73,8 +73,8 @@
                 <br />
 
 
-                <button onclick="LoginButton()" id="butLogin" type="submit">Login</button>
-                <button onclick="RegisterButton()" id="butRegister" type="submit">Register</button>
+                <button onclick="LoginButton()" id="butLogin">Login</button>
+                <button onclick="RegisterButton()" id="butRegister">Register</button>
                 <input type="checkbox" checked="checked"> Remember me
                 <br />
                 
@@ -110,7 +110,7 @@
               console.log('signIn error', error);
               // ...
             });
-            document.getElementById('signInLink').value = "LOG OUT";
+            document.getElementById('#signInLink').value = "LOG OUT";
         };
 
         function RegisterButton() {
@@ -131,13 +131,13 @@
               }
             
             });
-            document.getElementById('signInLink').value = "LOG OUT";
+            document.getElementById('#signInLink').value = "LOG OUT";
         };
     
         document.signOut = function() {
           // Sign out
           firebase.auth().signOut();
-            document.getElementById('signInLink').value = "SIGN IN";
+            document.getElementById('#signInLink').value = "SIGN IN";
         };
         // Listen to auth state changes
         firebase.auth().onAuthStateChanged(function(user) {
