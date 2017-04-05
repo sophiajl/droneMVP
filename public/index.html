@@ -17,8 +17,13 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="scripts/respond.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
 
     </head>
+    
+    
+    
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -33,7 +38,7 @@
                       <li><a href='about.html'>ABOUT US</a></li>
                       <li><a href='services.html'>SERVICES</a></li>
                       <li><a href='featuredWork.html'>FEATURED WORK</a></li>
-                      <li class='userLinks' id='signInLink'><a href='signIn.html'>SIGN IN</a></li>
+                      <li class='userLinks' id='signInLink'><a href='signIn.html' onclick="firebase()">SIGN IN</a></li>
                       <li class='userLinks' id='lastLink' ><a href='jobPost.html'>POST A JOB</a></li>
                       <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
                   </ul>
@@ -123,5 +128,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+
     </body>
 </html>
+
