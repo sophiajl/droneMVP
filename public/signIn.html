@@ -45,7 +45,7 @@
                       <li><a href='about.html'>ABOUT US</a></li>
                       <li><a href='services.html'>SERVICES</a></li>
                       <li><a href='featuredWork.html'>FEATURED WORK</a></li>
-                      <li class='userLinks'><a href=''>SIGN IN</a></li>
+                      <li class='userLinks' id='signInLink'><a href=''>SIGN IN</a></li>
                       <li class='userLinks' id='lastLink' ><a href='jobPost.html'>POST A JOB</a></li>
                       <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
                   </ul>
@@ -75,6 +75,7 @@
 
                 <button onclick="LoginButton()" id="butLogin" type="button">Login</button>
                 <button onclick="RegisterButton()" id="butRegister" type="button">Register</button>
+                <button onclick="LogoutButton()" id="butLogout" type="button">Logout</button>
                 <input type="checkbox" checked="checked"> Remember me
                 <br />
                 
@@ -108,9 +109,9 @@
               var errorCode = error.code;
               var errorMessage = error.message;
               console.log('signIn error', error);
+              alert(error.message);
               // ...
             });
-            document.getElementById('#signInLink').value = "LOG OUT";
         };
 
         function RegisterButton() {
@@ -128,19 +129,30 @@
               console.log('register error', error);
               if (error.code === 'auth/email-already-in-use') {
                 alert("Email already in use. Please try again.")
+              } else {
+                  alert(error.message);
               }
             
             });
-            document.getElementById('#signInLink').value = "LOG OUT";
+            
         };
     
-        document.signOut = function() {
+        function LogoutButton() {
           // Sign out
           firebase.auth().signOut();
-            document.getElementById('#signInLink').value = "SIGN IN";
         };
         // Listen to auth state changes
         firebase.auth().onAuthStateChanged(function(user) {
+            if(user) {
+                alert("Successfully logged in");
+                document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
+                console.log('signinlink object is ' + document.getElementById('signInLink'));
+                console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML);
+            } else {
+                alert("You are no longer logged in");
+                
+            document.getElementById('signInLink').innerHTML = "<a>SIGN IN</a>";
+            }
           console.log('user', user);
         });
     
