@@ -51,7 +51,7 @@
         </div>
 
         <div class='container'>
-            <form id='signInForm'>
+            <form id='signInForm' method="POST" action="http://formspree.io/junseobshin@gmail.com">
                 <label><b>Title</b></label>
                 <input type="text" placeholder="Enter title for your job i.e. 'Birthday Party'" name='uname' required>
                 <br />
@@ -73,7 +73,7 @@
 
                 <label><b>Locations</b></label><br>
                 <select name='locations'>
-                    <option value="singleLocation">This job is for a signle location.</option>
+                    <option value="singleLocation">This job is for a single location.</option>
                     <option value="multiLocation">This job is for multiple locations.</option>
                 </select>
                 <br />
@@ -149,6 +149,8 @@
                 </select>
                 <br />
 
+                <textarea name="message" placeholder="Your message"></textarea>
+
                 <button onclick="CreateJobButton()" id="createJob" type="submit">Create Job</button>
                 <br />
             </form>
@@ -165,27 +167,26 @@
         function CreateJobButton() {
             console.log('In CreateJobButton');
           $.ajax({
-            type: “POST”,
-            url: “https://mandrillapp.com/api/1.0/messages/send.json”,
-            data: {
-            ‘key’: ‘1c80e932f7f929d0a8cd1f383dc0dcdf-us15’,
-            ‘message’: {
-            ‘from_email’: ‘junseobshin@gmail.com’,
-            ‘to’: [
-            {
-                ‘email’: ‘junseobshin@gmail.com’,
-             ‘name’: ‘JUN’,
-             ‘type’: ‘to’
-            }
-            ],
-             ‘autotext’: ‘true’,
-             ‘subject’: ‘TEST SUBJECT!’,
-                ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
-            }
-            }
-        }).done(function(response) {
-             console.log(response); // if you're into that sorta thing
-         });
+        method: "POST",
+        url: "http://formspree.io/junseobshin@gmail.com",
+        contentType: "application/json",
+        dataType: "json",
+        data: {
+
+            message: "hello!"
+<!--first_name: $("#namec").val(),-->
+            last_name: $("#surnamec").val(),
+            email: $("#emailc").val(),
+            mobile: $("#numberc").val(),
+            password: $("#passwordc").val()>
+        },
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(response) {
+            console.log(response);
+        }
+});
         };
         </script>
         <script>
