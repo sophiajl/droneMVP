@@ -94,9 +94,8 @@
             alert("Email required!");
             return console.log('email required');
           }
-          var auth = firebase.auth();
           // Send password reset email
-          auth.sendPasswordResetEmail(email).then(function() {
+          firebase.auth().sendPasswordResetEmail(email).then(function() {
             alert("Email sent");
           }, function(error) {
             alert("An error occurred. Please try again.");
