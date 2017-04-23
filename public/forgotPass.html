@@ -75,6 +75,15 @@
     <!--    <script src="js/auth.js"></script> -->
             
             <script>
+            var config = {
+        apiKey: "AIzaSyDn8L0VPArpzp99f48fwPSKbiFkO_5lTV4",
+        authDomain: "dronemvp-c08f1.firebaseapp.com",
+        databaseURL: "https://dronemvp-c08f1.firebaseio.com",
+        projectId: "dronemvp-c08f1",
+        storageBucket: "",
+        messagingSenderId: "866448759560"
+    };
+    firebase.initializeApp(config);
         function SubmitButton() {
             console.log('In butSub');
           var email = document.getElementById('txtEmail').value;
