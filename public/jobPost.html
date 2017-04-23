@@ -149,7 +149,7 @@
                 </select>
                 <br />
 
-                <button type="submit">Create Job</button>
+                <button onclick="CreateJobButton()" id="createJob" type="submit">Create Job</button>
                 <br />
             </form>
         </div>
@@ -161,6 +161,33 @@
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        function CreateJobButton() {
+            console.log('In CreateJobButton');
+          $.ajax({
+            type: “POST”,
+            url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+            data: {
+            ‘key’: ‘1c80e932f7f929d0a8cd1f383dc0dcdf-us15’,
+            ‘message’: {
+            ‘from_email’: ‘junseobshin@gmail.com’,
+            ‘to’: [
+            {
+                ‘email’: ‘junseobshin@gmail.com’,
+             ‘name’: ‘JUN’,
+             ‘type’: ‘to’
+            }
+            ],
+             ‘autotext’: ‘true’,
+             ‘subject’: ‘TEST SUBJECT!’,
+                ‘html’: ‘YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!’
+            }
+            }
+        }).done(function(response) {
+             console.log(response); // if you're into that sorta thing
+         });
+        };
+        </script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
