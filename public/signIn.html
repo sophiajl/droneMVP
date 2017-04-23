@@ -46,7 +46,7 @@
                       <li><a href='services.html'>SERVICES</a></li>
                       <li><a href='featuredWork.html'>FEATURED WORK</a></li>
                       <li class='userLinks' id='signInLink'><a href=''>SIGN IN</a></li>
-                      <li class='userLinks' id='lastLink' ><a href='jobPost.html'>POST A JOB</a></li>
+                      <li class='jobLink' id='lastLink' ><a href='jobPost.html'>POST A JOB</a></li>
                       <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
                   </ul>
                 </nav>
@@ -148,10 +148,10 @@
                 document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
                 console.log('signinlink object is ' + document.getElementById('signInLink'));
                 console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML);
-                $("#lastLink").toggle();
+                $("#lastLink").show();
             } else {
                 alert("You are no longer logged in");
-                $("#lastLink").toggle();
+                $("#lastLink").hide();
                 
             document.getElementById('signInLink').innerHTML = "<a>SIGN IN</a>";
             }
