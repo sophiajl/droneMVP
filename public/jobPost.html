@@ -51,7 +51,7 @@
         </div>
 
         <div class='container'>
-            <form id='signInForm' method="POST" action="http://formspree.io/junseobshin@gmail.com">
+            <form id='signInForm' method="POST" action="https://formspree.io/junseobshin@gmail.com">
                 <label><b>Title</b></label>
                 <input type="text" placeholder="Enter title for your job i.e. 'Birthday Party'" name='uname' required>
                 <br />
@@ -168,12 +168,19 @@
             console.log('In CreateJobButton');
           $.ajax({
         method: "POST",
-        url: "http://formspree.io/junseobshin@gmail.com",
+        url: "https://formspree.io/junseobshin@gmail.com.",
         contentType: "application/json",
         dataType: "json",
         data: {
-
-            message: "hello!"
+            title: $("#uname").val(),
+            description: $("#description").val(),
+            industry: $("#industry").val(),
+            locations: $("#locations").val(),
+            address: $("#address").val(),
+            city : $("#city").val(),
+            state: $("#state").val(),
+            pilots: $("#pilots").val(),
+            message: $("#message")
         },
         success: function(response) {
             console.log(response);
