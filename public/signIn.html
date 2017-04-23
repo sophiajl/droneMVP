@@ -103,8 +103,12 @@
             return console.log('email and password required');
           }
           // Sign in user
-          firebase.auth().signInWithEmailAndPassword(email, password)
-            .catch(function(error) {
+          firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
+                alert("Successfully logged in");
+                document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
+                console.log('signinlink object is ' + document.getElementById('signInLink'));
+                console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML)
+          }).catch(function(error) {
               // Handle Errors here.
               var errorCode = error.code;
               var errorMessage = error.message;
@@ -124,8 +128,12 @@
           }
             console.log('email is ' + email + ' password is' + password);
           // Register user
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .catch(function(error) {
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
+                alert("Successfully logged in");
+                document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
+                console.log('signinlink object is ' + document.getElementById('signInLink'));
+                console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML)
+          }).catch(function(error) {
               console.log('register error', error);
               if (error.code === 'auth/email-already-in-use') {
                 alert("Email already in use. Please try again.")
@@ -139,24 +147,30 @@
     
         function LogoutButton() {
           // Sign out
-          firebase.auth().signOut();
-        };
-        // Listen to auth state changes
-        firebase.auth().onAuthStateChanged(function(user) {
-            if(user) {
-                alert("Successfully logged in");
-                document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
-                console.log('signinlink object is ' + document.getElementById('signInLink'));
-                console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML);
-                $("#lastLink").show();
-            } else {
-                alert("You are no longer logged in");
+          firebase.auth().signOut().then(function(user) {
+            alert("You are no longer logged in");
                 $("#lastLink").hide();
                 
             document.getElementById('signInLink').innerHTML = "<a>SIGN IN</a>";
-            }
-          console.log('user', user);
-        });
+   
+}).;
+        };
+        // Listen to auth state changes
+        //firebase.auth().onAuthStateChanged(function(user) {
+          //  if(user) {
+          //      alert("Successfully logged in");
+           //     document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
+           //     console.log('signinlink object is ' + document.getElementById('signInLink'));
+           //     console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML);
+//                $("#lastLink").show();
+  //          } else {
+    //            alert("You are no longer logged in");
+      //          $("#lastLink").hide();
+                
+        //    document.getElementById('signInLink').innerHTML = "<a>SIGN IN</a>";
+         //   }
+       //   console.log('user', user);
+      //  });
     
     
 </script>
