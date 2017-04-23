@@ -56,7 +56,7 @@
         <div class="main-container">
             <div class="main wrapper clearfix">
               <div class="pageTitleText">
-                <h1>Sign In</h1>
+                <h1>Reset Password</h1>
                 <h2>Dashboard Access</h2>
               </div>
             </div>
@@ -68,20 +68,12 @@
                 <input id="txtEmail" type="text" placeholder="Enter Email" name='ename' required>
                 <br />
 
-                <label><b>Password</b></label>
-                <input id="txtPassword" type="password" placeholder="Enter Password" name='pword' required>
                 <br />
 
 
-                <button onclick="LoginButton()" id="butLogin" type="button">Login</button>
-                <button onclick="RegisterButton()" id="butRegister" type="button">Register</button>
-                <button onclick="LogoutButton()" id="butLogout" type="button">Logout</button>
-                <input type="checkbox" checked="checked"> Remember me
+                <button onclick="SubmitButton()" id="butSub" type="button">Submit</button>
                 <br />
                 
-                
-
-                <span class="pword"><a href="forgotPass.html">Forgot password?</a></span>
             </form>
         </div>
 
@@ -93,71 +85,23 @@
     <!--    <script src="js/auth.js"></script> -->
             
             <script>
-        function LoginButton() {
-            console.log('In butLogin');
+        function SubmitButton() {
+            console.log('In butSub');
           var email = document.getElementById('txtEmail').value;
-          var password = document.getElementById('txtPassword').value;
           
-          console.log('email is ' + email + ' password is' + password);
-          if (!email || !password) {
-            return console.log('email and password required');
+          console.log('email is ' + email);
+          if (!email) {
+            alert("Email required!");
+            return console.log('email required');
           }
-          // Sign in user
-          firebase.auth().signInWithEmailAndPassword(email, password)
-            .catch(function(error) {
-              // Handle Errors here.
-              var errorCode = error.code;
-              var errorMessage = error.message;
-              console.log('signIn error', error);
-              alert(error.message);
-              // ...
-            });
+          // Send password reset email
+          auth.sendPasswordResetEmail(email).then(function() {
+            alert("Email sent");
+          }, function(error) {
+            alert("An error occurred. Please try again.");
+          });
         };
 
-        function RegisterButton() {
-            console.log('In butRegister');
-          var email = document.getElementById('txtEmail').value;
-          var password = document.getElementById('txtPassword').value;
-            
-          if (!email || !password) {
-            return console.log('email and password required');
-          }
-            console.log('email is ' + email + ' password is' + password);
-          // Register user
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .catch(function(error) {
-              console.log('register error', error);
-              if (error.code === 'auth/email-already-in-use') {
-                alert("Email already in use. Please try again.")
-              } else {
-                  alert(error.message);
-              }
-            
-            });
-            
-        };
-    
-        function LogoutButton() {
-          // Sign out
-          firebase.auth().signOut();
-        };
-        // Listen to auth state changes
-        firebase.auth().onAuthStateChanged(function(user) {
-            if(user) {
-                alert("Successfully logged in");
-                document.getElementById('signInLink').innerHTML = "<a>LOG OUT</a>";
-                console.log('signinlink object is ' + document.getElementById('signInLink'));
-                console.log('signinlink value is ' + document.getElementById('signInLink').innerHTML);
-                $("#lastLink").toggle();
-            } else {
-                alert("You are no longer logged in");
-                $("#lastLink").toggle();
-                
-            document.getElementById('signInLink').innerHTML = "<a>SIGN IN</a>";
-            }
-          console.log('user', user);
-        });
-    
     
 </script>
 
