@@ -96,7 +96,7 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #effdfc 0%, #bec5dd 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#effdfc', endColorstr='#bec5dd',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#effdfc', endColorstr='#bec5dd',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -173,6 +173,16 @@ ul.topnav li a:hover {
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {
   display: none;
+}
+
+ul.topnav li a.imgLink {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+a img {
+  display: block;
+  height: 36px;
 }
 
 /* ==========================================================================

@@ -4,11 +4,11 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
-    Hunter Bryant -- Frontend Engineer -- Don't use my twitter
+    Hunter Bryant --
     Sophia Li --
     Ashley Szydel --
     Kat Wang Meow --
-    Junseob Shin -- 
+    Junseob Shin --
 
 # THANKS
 
