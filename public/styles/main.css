@@ -96,7 +96,7 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #effdfc 0%, #bec5dd 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#effdfc', endColorstr='#bec5dd',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#effdfc', endColorstr='#bec5dd',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -120,9 +120,9 @@ body {
   background-color: #FFFFFF;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 .headerContainer li {
@@ -154,12 +154,11 @@ ul.topnav li a {
   display: inline-block;
   color: #828282;
   text-align: center;
-  padding: 30px 16px;
-  padding-bottom: 33px;
+  padding: 30px 16px 33px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: .8em;
-  letter-spacing: .25em;
+  font-size: 0.8em;
+  letter-spacing: 0.25em;
 }
 
 ul.topnav li.userLinks a {
@@ -190,13 +189,13 @@ ul.topnav li.icon {
   background-position: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
   margin-top: 50px;
   height: 400px;
   border-radius: 10px;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-size: 1em;
 }
 
@@ -221,12 +220,12 @@ ul.topnav li.icon {
 }
 
 #left:hover {
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
   background-color: transparent;
 }
 
 #right:hover {
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
   background-color: transparent;
 }
 
@@ -244,7 +243,7 @@ ul.topnav li.icon {
   width: 100%;
   text-align: center;
   font-size: 2em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #333333;
 }
@@ -257,7 +256,7 @@ ul.topnav li.icon {
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #828282;
   margin-bottom: 100px;
@@ -271,6 +270,7 @@ ul.topnav li.icon {
 }
 
 .col img {
+  position: relative;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -278,7 +278,7 @@ ul.topnav li.icon {
 
 .col h3 {
   font-size: 1.2em;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-weight: 600;
   color: #828282;
   padding-left: 20px;
@@ -287,7 +287,7 @@ ul.topnav li.icon {
 }
 
 .col p {
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 600;
   padding-left: 20px;
   line-height: 2em;
@@ -299,9 +299,9 @@ ul.topnav li.icon {
 .col {
   border-radius: 10px;
   background-color: white;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 .row {
@@ -315,7 +315,7 @@ ul.topnav li.icon {
   width: 100%;
   text-align: center;
   font-size: 1.5em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #333333;
 }
@@ -397,7 +397,7 @@ ul.topnav li.icon {
   .DroneMVPText h2 {
     width: calc(100%-40px);
     margin-top: 15px;
-    font-size: .8em;
+    font-size: 0.8em;
     margin-bottom: 40px;
   }
   .container {
@@ -476,8 +476,8 @@ ul.topnav li.icon {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.clearfix:before {
   content: " ";
   /* 1 */
   display: table;
@@ -508,8 +508,8 @@ ul.topnav li.icon {
    ========================================================================== */
 @media print {
   *,
-  *:before,
   *:after,
+  *:before,
   *:first-letter,
   *:first-line {
     background: transparent !important;
@@ -537,8 +537,8 @@ ul.topnav li.icon {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  blockquote,
+  pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -549,16 +549,16 @@ ul.topnav li.icon {
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  img,
+  tr {
     page-break-inside: avoid;
   }
   img {
     max-width: 100% !important;
   }
-  p,
   h2,
-  h3 {
+  h3,
+  p {
     orphans: 3;
     widows: 3;
   }
