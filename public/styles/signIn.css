@@ -96,7 +96,7 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #effdfc 0%, #bec5dd 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#effdfc', endColorstr='#bec5dd',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#effdfc', endColorstr='#bec5dd',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -120,9 +120,9 @@ body {
   background-color: #FFFFFF;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 .headerContainer li {
@@ -154,12 +154,21 @@ ul.topnav li a {
   display: inline-block;
   color: #828282;
   text-align: center;
-  padding: 30px 16px;
-  padding-bottom: 33px;
+  padding: 30px 16px 33px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: .8em;
-  letter-spacing: .25em;
+  font-size: 0.8em;
+  letter-spacing: 0.25em;
+}
+
+ul.topnav li a.imgLink {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+a img {
+  display: block;
+  height: 36px;
 }
 
 ul.topnav li.userLinks a {
@@ -178,12 +187,12 @@ ul.topnav li.icon {
 
 .pageTitleText h1 {
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   width: calc(100%-100px);
   width: 100%;
   text-align: center;
   font-size: 1.5em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   font-weight: 600;
   color: #333333;
@@ -191,13 +200,13 @@ ul.topnav li.icon {
 
 .pageTitleText h2 {
   width: calc(100%-100px);
-  margin-top: 0px;
+  margin-top: 0;
   padding-left: 50px;
   padding-right: 50px;
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #828282;
   margin-bottom: 50px;
@@ -215,32 +224,32 @@ label {
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #828282;
   text-transform: uppercase;
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=password],
+input[type=text] {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin: 10px 0 40px;
   display: inline-block;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 10px;
   background-color: white;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
-input[type=checkbox], p {
+input[type=checkbox],
+p {
   text-align: right;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 #signInForm {
@@ -255,18 +264,17 @@ input[type=checkbox], p {
 button {
   background-color: #2BA84A;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: white;
   padding: 14px 20px;
-  margin: 0px 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
   border: none;
   cursor: pointer;
   width: 100%;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Add a hover effect for buttons */
@@ -406,8 +414,8 @@ button:hover {
     * 2. The use of `table` rather than `block` is only necessary if using
     *    `:before` to contain the top-margins of child elements.
     */
-.clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.clearfix:before {
   content: " ";
   /* 1 */
   display: table;
@@ -438,8 +446,8 @@ button:hover {
       ========================================================================== */
 @media print {
   *,
-  *:before,
   *:after,
+  *:before,
   *:first-letter,
   *:first-line {
     background: transparent !important;
@@ -467,8 +475,8 @@ button:hover {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  blockquote,
+  pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -479,16 +487,16 @@ button:hover {
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  img,
+  tr {
     page-break-inside: avoid;
   }
   img {
     max-width: 100% !important;
   }
-  p,
   h2,
-  h3 {
+  h3,
+  p {
     orphans: 3;
     widows: 3;
   }

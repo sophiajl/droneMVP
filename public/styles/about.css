@@ -96,7 +96,7 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #effdfc 0%, #bec5dd 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#effdfc', endColorstr='#bec5dd',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#effdfc', endColorstr='#bec5dd',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -120,9 +120,9 @@ body {
   background-color: #FFFFFF;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 .headerContainer li {
@@ -154,12 +154,21 @@ ul.topnav li a {
   display: inline-block;
   color: #828282;
   text-align: center;
-  padding: 30px 16px;
-  padding-bottom: 33px;
+  padding: 30px 16px 33px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: .8em;
-  letter-spacing: .25em;
+  font-size: 0.8em;
+  letter-spacing: 0.25em;
+}
+
+ul.topnav li a.imgLink {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+a img {
+  display: block;
+  height: 36px;
 }
 
 ul.topnav li.userLinks a {
@@ -178,25 +187,25 @@ ul.topnav li.icon {
 
 .pageTitleText h1 {
   margin-top: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   width: calc(100%-100px);
   width: 100%;
   text-align: center;
   font-size: 1.5em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #333333;
 }
 
 .pageTitleText h2 {
   width: calc(100%-100px);
-  margin-top: 0px;
+  margin-top: 0;
   padding-left: 50px;
   padding-right: 50px;
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #828282;
   margin-bottom: 50px;
@@ -211,7 +220,7 @@ ul.topnav li.icon {
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   font-weight: 600;
   color: #828282;
   margin-bottom: 50px;
@@ -225,8 +234,8 @@ ul.topnav li.icon {
   line-height: 2em;
   text-align: left;
   text-indent: 40px;
-  font-size: .9em;
-  letter-spacing: 0em;
+  font-size: 0.9em;
+  letter-spacing: 0;
   font-weight: 600;
   margin-bottom: 40px;
 }
@@ -251,9 +260,9 @@ ul.topnav li.icon {
   border-color: #ffffff;
   border-width: 5px;
   border-style: solid;
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
 }
 
 .columnDiv h2 {
@@ -262,7 +271,7 @@ ul.topnav li.icon {
   line-height: 2em;
   text-align: center;
   font-size: 1em;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: 600;
 }
 
@@ -270,8 +279,8 @@ ul.topnav li.icon {
   padding-top: 10px;
   text-align: center;
   line-height: 2em;
-  font-size: .8em;
-  letter-spacing: .05em;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
   color: #828282;
 }
 
@@ -339,7 +348,7 @@ ul.topnav li.icon {
   .DroneMVPText h2 {
     width: calc(100%-40px);
     margin-top: 15px;
-    font-size: .8em;
+    font-size: 0.8em;
     margin-bottom: 40px;
   }
   .container {
@@ -370,19 +379,19 @@ ul.topnav li.icon {
   }
   .columnDiv h2 {
     text-align: left;
-    padding-top: 0px;
+    padding-top: 0;
     margin-left: 40%;
     line-height: 2em;
-    font-size: .8em;
-    letter-spacing: .05em;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
   }
   .columnDiv p {
     text-align: left;
-    padding-top: 0px;
+    padding-top: 0;
     margin-left: 40%;
     line-height: 2em;
-    font-size: .8em;
-    letter-spacing: .05em;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
     color: #828282;
   }
   .storyTitleText h2 {
@@ -448,8 +457,8 @@ ul.topnav li.icon {
     * 2. The use of `table` rather than `block` is only necessary if using
     *    `:before` to contain the top-margins of child elements.
     */
-.clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.clearfix:before {
   content: " ";
   /* 1 */
   display: table;
@@ -480,8 +489,8 @@ ul.topnav li.icon {
       ========================================================================== */
 @media print {
   *,
-  *:before,
   *:after,
+  *:before,
   *:first-letter,
   *:first-line {
     background: transparent !important;
@@ -509,8 +518,8 @@ ul.topnav li.icon {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  blockquote,
+  pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -521,16 +530,16 @@ ul.topnav li.icon {
   thead {
     display: table-header-group;
   }
-  tr,
-  img {
+  img,
+  tr {
     page-break-inside: avoid;
   }
   img {
     max-width: 100% !important;
   }
-  p,
   h2,
-  h3 {
+  h3,
+  p {
     orphans: 3;
     widows: 3;
   }
